@@ -4,7 +4,7 @@
 
 Currently it reports any missing pages, request errors, and missing sections within a page which are linked via fragments.
 
-```php
+```plain
 composer install
 bin/link-check https://amphp.org/ https://amphp.org/aerys
 ```
