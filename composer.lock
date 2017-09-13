@@ -1,0 +1,835 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5cc1220fd8401d4e52deaf316ec9005e",
+    "packages": [
+        {
+            "name": "amphp/amp",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/amp.git",
+                "reference": "916cf3119d96ba6d3b5a8c9d9bdd258960400141"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/amp/zipball/916cf3119d96ba6d3b5a8c9d9bdd258960400141",
+                "reference": "916cf3119d96ba6d3b5a8c9d9bdd258960400141",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6.0.9",
+                "react/promise": "^2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Amp\\": "lib"
+                },
+                "files": [
+                    "lib/functions.php",
+                    "lib/Internal/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob Weinand",
+                    "email": "bobwei9@hotmail.com"
+                },
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@php.net"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "A non-blocking concurrency framework for PHP applications.",
+            "homepage": "http://amphp.org/amp",
+            "keywords": [
+                "async",
+                "asynchronous",
+                "awaitable",
+                "concurrency",
+                "event",
+                "event-loop",
+                "future",
+                "non-blocking",
+                "promise"
+            ],
+            "time": "2017-07-09T12:20:40+00:00"
+        },
+        {
+            "name": "amphp/artax",
+            "version": "v3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/artax.git",
+                "reference": "48008dcfd6e7376d5631a6c55bdf01ff94878537"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/artax/zipball/48008dcfd6e7376d5631a6c55bdf01ff94878537",
+                "reference": "48008dcfd6e7376d5631a6c55bdf01ff94878537",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/file": "^0.2",
+                "amphp/socket": "^0.10",
+                "amphp/uri": "^0.1",
+                "kelunik/certificate": "^1.1",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Artax\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@gmail.com"
+                }
+            ],
+            "description": "Asynchronous parallel HTTP/1.1 client built on the Amp concurrency framework",
+            "homepage": "https://github.com/amphp/artax",
+            "keywords": [
+                "async",
+                "client",
+                "http",
+                "non-blocking",
+                "parallel",
+                "rest"
+            ],
+            "time": "2017-07-14T13:01:08+00:00"
+        },
+        {
+            "name": "amphp/byte-stream",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/byte-stream.git",
+                "reference": "6b9074fbf28fc871581204f5106c819004ed3aa3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/byte-stream/zipball/6b9074fbf28fc871581204f5106c819004ed3aa3",
+                "reference": "6b9074fbf28fc871581204f5106c819004ed3aa3",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\ByteStream\\": "lib"
+                },
+                "files": [
+                    "lib/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "A stream abstraction to make working with non-blocking I/O simple.",
+            "homepage": "http://amphp.org/byte-stream",
+            "keywords": [
+                "amp",
+                "amphp",
+                "async",
+                "io",
+                "non-blocking",
+                "stream"
+            ],
+            "time": "2017-07-15T08:11:27+00:00"
+        },
+        {
+            "name": "amphp/cache",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/cache.git",
+                "reference": "d6ab81ce35019b0fd84ca6d665fd4817bfd11701"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/cache/zipball/d6ab81ce35019b0fd84ca6d665fd4817bfd11701",
+                "reference": "d6ab81ce35019b0fd84ca6d665fd4817bfd11701",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Cache\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@php.net"
+                }
+            ],
+            "description": "A promise-aware caching API for Amp.",
+            "homepage": "https://github.com/amphp/cache",
+            "time": "2017-06-24T09:51:10+00:00"
+        },
+        {
+            "name": "amphp/dns",
+            "version": "v0.9.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/dns.git",
+                "reference": "1a41089d84675bbeed3b5c655ffccd3318a21f37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/dns/zipball/1a41089d84675bbeed3b5c655ffccd3318a21f37",
+                "reference": "1a41089d84675bbeed3b5c655ffccd3318a21f37",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/byte-stream": "^1.1",
+                "amphp/cache": "^1",
+                "amphp/file": "^0.2",
+                "amphp/parser": "^1",
+                "amphp/uri": "^0.1",
+                "amphp/windows-registry": "^0.3",
+                "daverandom/libdns": "^1",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Dns\\": "lib"
+                },
+                "files": [
+                    "lib/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob Weinand",
+                    "email": "bobwei9@hotmail.com"
+                },
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@php.net"
+                },
+                {
+                    "name": "Chris Wright",
+                    "email": "addr@daverandom.com"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "Async DNS resolution for Amp.",
+            "homepage": "https://github.com/amphp/dns",
+            "keywords": [
+                "amp",
+                "amphp",
+                "async",
+                "client",
+                "dns",
+                "resolve"
+            ],
+            "time": "2017-09-12T15:08:38+00:00"
+        },
+        {
+            "name": "amphp/file",
+            "version": "v0.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/file.git",
+                "reference": "577bcc1f92252a795f9871e183b0caef975c9635"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/file/zipball/577bcc1f92252a795f9871e183b0caef975c9635",
+                "reference": "577bcc1f92252a795f9871e183b0caef975c9635",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/byte-stream": "^1",
+                "amphp/parallel": "^0.1.8"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\File\\": "lib"
+                },
+                "files": [
+                    "lib/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@php.net"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "Allows non-blocking access to the filesystem for Amp.",
+            "homepage": "https://github.com/amphp/file",
+            "keywords": [
+                "amp",
+                "amphp",
+                "async",
+                "disk",
+                "file",
+                "filesystem",
+                "io",
+                "non-blocking",
+                "static"
+            ],
+            "time": "2017-07-21T06:32:23+00:00"
+        },
+        {
+            "name": "amphp/parallel",
+            "version": "v0.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/parallel.git",
+                "reference": "25b9a2a75c4a6ba4815775267822066abab1054a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/parallel/zipball/25b9a2a75c4a6ba4815775267822066abab1054a",
+                "reference": "25b9a2a75c4a6ba4815775267822066abab1054a",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/byte-stream": "^1.1",
+                "amphp/parser": "^1",
+                "amphp/process": "^0.2"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "suggest": {
+                "ext-pcntl": "Required for fork contexts",
+                "ext-pthreads": "Required for thread contexts",
+                "ext-sysvsem": "Required for fork synchronization",
+                "ext-sysvshm": "Required for fork contexts"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Parallel\\": "lib"
+                },
+                "files": [
+                    "lib/Worker/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Coakley",
+                    "email": "me@stephencoakley.com"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "Parallel processing component for Amp.",
+            "homepage": "https://github.com/amphp/parallel",
+            "keywords": [
+                "async",
+                "asynchronous",
+                "concurrent",
+                "multi-processing",
+                "multi-threading"
+            ],
+            "time": "2017-07-18T03:59:56+00:00"
+        },
+        {
+            "name": "amphp/parser",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/parser.git",
+                "reference": "f83e68f03d5b8e8e0365b8792985a7f341c57ae1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/parser/zipball/f83e68f03d5b8e8e0365b8792985a7f341c57ae1",
+                "reference": "f83e68f03d5b8e8e0365b8792985a7f341c57ae1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Parser\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "A generator parser to make streaming parsers simple.",
+            "homepage": "https://github.com/amphp/parser",
+            "keywords": [
+                "async",
+                "non-blocking",
+                "parser",
+                "stream"
+            ],
+            "time": "2017-06-06T05:29:10+00:00"
+        },
+        {
+            "name": "amphp/process",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/process.git",
+                "reference": "5aa6040fcf5c98bfb4f4a8e68305cb6cd6a3d37a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/process/zipball/5aa6040fcf5c98bfb4f4a8e68305cb6cd6a3d37a",
+                "reference": "5aa6040fcf5c98bfb4f4a8e68305cb6cd6a3d37a",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/byte-stream": "^1"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "kelunik/fqn-check": "^0.1.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Process\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob Weinand",
+                    "email": "bobwei9@hotmail.com"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "Asynchronous process manager",
+            "homepage": "https://github.com/amphp/process",
+            "time": "2017-07-18T03:37:19+00:00"
+        },
+        {
+            "name": "amphp/socket",
+            "version": "v0.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/socket.git",
+                "reference": "e58766bf0caa59bfa6ba56be260438af109eaea1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/socket/zipball/e58766bf0caa59bfa6ba56be260438af109eaea1",
+                "reference": "e58766bf0caa59bfa6ba56be260438af109eaea1",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/byte-stream": "^1.1",
+                "amphp/dns": "^0.9",
+                "amphp/uri": "^0.1",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "amphp/phpunit-util": "^1",
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Socket\\": "lib"
+                },
+                "files": [
+                    "lib/functions.php",
+                    "lib/Internal/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@gmail.com"
+                },
+                {
+                    "name": "Aaron Piotrowski",
+                    "email": "aaron@trowski.com"
+                }
+            ],
+            "description": "Async socket connection / server tools for Amp.",
+            "homepage": "https://github.com/amphp/socket",
+            "keywords": [
+                "amp",
+                "async",
+                "encryption",
+                "non-blocking",
+                "sockets",
+                "tcp",
+                "tls"
+            ],
+            "time": "2017-07-03T10:48:49+00:00"
+        },
+        {
+            "name": "amphp/uri",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/uri.git",
+                "reference": "2de94666447319d8695f2d11f3f005d5fee0876a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/uri/zipball/2de94666447319d8695f2d11f3f005d5fee0876a",
+                "reference": "2de94666447319d8695f2d11f3f005d5fee0876a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpunit/phpunit": "^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\Uri\\": "src"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                },
+                {
+                    "name": "Daniel Lowrey"
+                }
+            ],
+            "description": "Uri Parser and Resolver.",
+            "homepage": "https://github.com/amphp/uri",
+            "time": "2017-09-10T09:39:50+00:00"
+        },
+        {
+            "name": "amphp/windows-registry",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amphp/windows-registry.git",
+                "reference": "9a5957ee3694c6d78440acd5a1c7adbd2d749de7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amphp/windows-registry/zipball/9a5957ee3694c6d78440acd5a1c7adbd2d749de7",
+                "reference": "9a5957ee3694c6d78440acd5a1c7adbd2d749de7",
+                "shasum": ""
+            },
+            "require": {
+                "amphp/amp": "^2",
+                "amphp/process": "^0.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amp\\WindowsRegistry\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                }
+            ],
+            "description": "Windows Registry Reader.",
+            "time": "2017-06-16T08:55:58+00:00"
+        },
+        {
+            "name": "daverandom/libdns",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DaveRandom/LibDNS.git",
+                "reference": "67de5497e84d179dffc089c5eb6a1945eb4e9460"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DaveRandom/LibDNS/zipball/67de5497e84d179dffc089c5eb6a1945eb4e9460",
+                "reference": "67de5497e84d179dffc089c5eb6a1945eb4e9460",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LibDNS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "DNS protocol implementation written in pure PHP",
+            "keywords": [
+                "dns"
+            ],
+            "time": "2016-04-29T20:47:45+00:00"
+        },
+        {
+            "name": "kelunik/certificate",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kelunik/certificate.git",
+                "reference": "524fa432ed1b5f50efbe7749f3c19e28a9866bc7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kelunik/certificate/zipball/524fa432ed1b5f50efbe7749f3c19e28a9866bc7",
+                "reference": "524fa432ed1b5f50efbe7749f3c19e28a9866bc7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": "^5.4 | ^7.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kelunik\\Certificate\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niklas Keller",
+                    "email": "me@kelunik.com"
+                }
+            ],
+            "description": "Access certificate details and transform between different formats.",
+            "keywords": [
+                "DER",
+                "certificate",
+                "certificates",
+                "openssl",
+                "pem",
+                "x509"
+            ],
+            "time": "2017-07-04T19:37:30+00:00"
+        },
+        {
+            "name": "room11/dom-utils",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Room-11/DOMUtils.git",
+                "reference": "724529187818c52e895914abc4969de11118093c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Room-11/DOMUtils/zipball/724529187818c52e895914abc4969de11118093c",
+                "reference": "724529187818c52e895914abc4969de11118093c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Room11\\DOMUtils\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Wright"
+                }
+            ],
+            "description": "Utility functions for the PHP DOM extension",
+            "time": "2016-10-19T15:15:02+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

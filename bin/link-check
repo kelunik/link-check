@@ -1,0 +1,92 @@
+#!/usr/bin/env php
+<?php
+
+use Amp\Artax\Client;
+use Amp\Artax\DefaultClient;
+use Amp\Loop;
+use Amp\Uri\Uri;
+use Kelunik\LinkCheck\LinkCheck;
+
+require __DIR__ . "/../vendor/autoload.php";
+
+$httpClient = new DefaultClient;
+$httpClient->setOption(Client::OP_TRANSFER_TIMEOUT, 3000);
+
+array_shift($argv);
+
+if (!$argv) {
+    print "Usage: bin/link-check 'https://example.com/' 'https://example.org/'\r\n";
+    exit(1);
+}
+
+$linkCheck = new LinkCheck($httpClient);
+
+foreach ($argv as $arg) {
+    $uri = new Uri($arg);
+
+    $linkCheck->addDomain($uri->getHost());
+    $linkCheck->enqueue($arg);
+}
+
+Loop::run();
+
+print "\r\n\r\n";
+
+$visitedUris = $linkCheck->getVisitedUris();
+$brokenLinks = [];
+$brokenPages = [];
+
+$seenUriVariations = $linkCheck->getSeenUriVariations();
+$existingUriVariations = $linkCheck->getExistingUriVariations();
+
+foreach ($visitedUris as $visitedUri => $status) {
+    if ($status === 404) {
+        foreach ($linkCheck->getLinks($visitedUri) as $link) {
+            $brokenLinks[$link][$visitedUri] = "page not found";
+        }
+    } else if ($status !== 200) {
+        $brokenPages[$visitedUri] = $status;
+    }
+
+    foreach ($seenUriVariations[$visitedUri] ?? [] as $seenUriVariation) {
+        $variationUri = new Uri($seenUriVariation);
+
+        if ($variationUri->getFragment() === "") {
+            continue;
+        }
+
+        if (!isset($existingUriVariations[$seenUriVariation])) {
+            foreach ($linkCheck->getLinks($seenUriVariation) as $link) {
+                $brokenLinks[$link][$seenUriVariation] = "non-existent heading";
+            }
+        }
+    }
+}
+
+printf("-- %'--60s\r\n", "Broken Pages ");
+
+foreach ($brokenPages as $brokenPage => $status) {
+    if ($status === -1) {
+        printf("%8s - %s\r\n", "timeout", $brokenPage);
+    } else {
+        printf("%8d - %s\r\n", $status, $brokenPage);
+    }
+}
+
+if (!$brokenPages) {
+    print "None found.\r\n";
+}
+
+print "\r\n";
+
+printf("-- %'--60s\r\n", "Broken Links ");
+
+foreach ($brokenLinks as $source => $targets) {
+    foreach ($targets as $target => $reason) {
+        printf("%s → %s (%s)\r\n", $source, $target, $reason);
+    }
+}
+
+if (!$brokenLinks) {
+    print "None found.\r\n";
+}

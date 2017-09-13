@@ -1,0 +1,23 @@
+{
+    "name": "kelunik/link-check",
+    "description": "Checks website links and fragments.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Niklas Keller",
+            "email": "me@kelunik.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kelunik\\LinkCheck\\": "src"
+        }
+    },
+    "require": {
+        "amphp/amp": "^2.0",
+        "amphp/uri": "^0.1.2",
+        "amphp/artax": "^3.0",
+        "room11/dom-utils": "^1.1"
+    }
+}
