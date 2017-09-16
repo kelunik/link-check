@@ -10,7 +10,7 @@ use Kelunik\LinkCheck\LinkCheck;
 require __DIR__ . "/../vendor/autoload.php";
 
 $httpClient = new DefaultClient;
-$httpClient->setOption(Client::OP_TRANSFER_TIMEOUT, 3000);
+$httpClient->setOption(Client::OP_TRANSFER_TIMEOUT, 10000);
 
 array_shift($argv);
 
